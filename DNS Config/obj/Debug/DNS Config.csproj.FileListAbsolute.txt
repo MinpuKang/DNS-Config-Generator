@@ -1,0 +1,71 @@
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS\DNS Config\DNS Config\bin\Debug\DNS Config.exe.config
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS\DNS Config\DNS Config\obj\Debug\DNS_Config.DNS_config.resources
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS\DNS Config\DNS Config\obj\Debug\DNS_Config.Properties.Resources.resources
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS\DNS Config\DNS Config\obj\Debug\DNS Config.csproj.GenerateResource.Cache
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS\DNS Config\DNS Config\bin\Debug\DNS Config.exe
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS\DNS Config\DNS Config\bin\Debug\DNS Config.pdb
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS\DNS Config\DNS Config\obj\Debug\DNS Config.exe
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS\DNS Config\DNS Config\obj\Debug\DNS Config.pdb
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS\Dns config\DNS Config\bin\Debug\DNS Config.exe.manifest
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS\Dns config\DNS Config\bin\Debug\DNS Config.application
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS\Dns config\DNS Config\obj\Debug\DNS Config.exe.manifest
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS\Dns config\DNS Config\obj\Debug\DNS Config.application
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS\DNS Config\DNS Config\obj\Debug\DNS_Config.about.resources
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS\DNS Config\DNS Config\obj\Debug\DNS Config.csproj.ResolveComReference.cache
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS\Dns config\DNS Config\obj\Debug\DNS_Config.Help.resources
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\bin\Debug\DNS Config.exe.config
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS Config.csproj.ResolveComReference.cache
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS Config.exe
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS Config.pdb
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\bin\Debug\DNS Config.exe.manifest
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\bin\Debug\DNS Config.application
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\bin\Debug\DNS Config.exe
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\bin\Debug\DNS Config.pdb
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS_Config.about.resources
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS_Config.DNS_config.resources
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS_Config.Help.resources
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS_Config.Properties.Resources.resources
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS Config.csproj.GenerateResource.Cache
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS Config.exe.manifest
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS Config.application
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS_Config.conver.resources
+C:\Users\eminpka\Documents\For Job\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS Config.csprojResolveAssemblyReference.cache
+C:\Users\EMINPKA\Documents\My Ericsson\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\bin\Debug\DNS Config.exe.config
+C:\Users\EMINPKA\Documents\My Ericsson\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS Config.csproj.ResolveComReference.cache
+C:\Users\EMINPKA\Documents\My Ericsson\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS Config.exe
+C:\Users\EMINPKA\Documents\My Ericsson\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS Config.pdb
+C:\Users\EMINPKA\Documents\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\bin\Debug\DNS Config.exe.config
+C:\Users\EMINPKA\Documents\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS Config.csproj.ResolveComReference.cache
+C:\Users\EMINPKA\Documents\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS Config.exe
+C:\Users\EMINPKA\Documents\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS Config.pdb
+C:\Users\EMINPKA\Documents\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\bin\Debug\DNS Config.exe.manifest
+C:\Users\EMINPKA\Documents\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\bin\Debug\DNS Config.application
+C:\Users\EMINPKA\Documents\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\bin\Debug\DNS Config.exe
+C:\Users\EMINPKA\Documents\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\bin\Debug\DNS Config.pdb
+C:\Users\EMINPKA\Documents\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS_Config.about.resources
+C:\Users\EMINPKA\Documents\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS_Config.conver.resources
+C:\Users\EMINPKA\Documents\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS_Config.DNS_config.resources
+C:\Users\EMINPKA\Documents\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS_Config.help.resources
+C:\Users\EMINPKA\Documents\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS_Config.Properties.Resources.resources
+C:\Users\EMINPKA\Documents\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS Config.csproj.GenerateResource.Cache
+C:\Users\EMINPKA\Documents\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS Config.exe.manifest
+C:\Users\EMINPKA\Documents\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS Config.application
+C:\Users\EMINPKA\Documents\My Project\Innovation\Visual Studio\Project\DNS Config\DNS Config\obj\Debug\DNS Config.csprojResolveAssemblyReference.cache
+C:\Users\Minpu Kang\Desktop\DNS Config\DNS Config\bin\Debug\DNS Config.exe.config
+C:\Users\Minpu Kang\Desktop\DNS Config\DNS Config\bin\Debug\DNS Config.exe.manifest
+C:\Users\Minpu Kang\Desktop\DNS Config\DNS Config\bin\Debug\DNS Config.application
+C:\Users\Minpu Kang\Desktop\DNS Config\DNS Config\bin\Debug\DNS Config.exe
+C:\Users\Minpu Kang\Desktop\DNS Config\DNS Config\bin\Debug\DNS Config.pdb
+C:\Users\Minpu Kang\Desktop\DNS Config\DNS Config\obj\Debug\DNS Config.csprojResolveAssemblyReference.cache
+C:\Users\Minpu Kang\Desktop\DNS Config\DNS Config\obj\Debug\DNS Config.csproj.ResolveComReference.cache
+C:\Users\Minpu Kang\Desktop\DNS Config\DNS Config\obj\Debug\DNS_Config.about.resources
+C:\Users\Minpu Kang\Desktop\DNS Config\DNS Config\obj\Debug\DNS_Config.conver.resources
+C:\Users\Minpu Kang\Desktop\DNS Config\DNS Config\obj\Debug\DNS_Config.DNS_config.resources
+C:\Users\Minpu Kang\Desktop\DNS Config\DNS Config\obj\Debug\DNS_Config.help.resources
+C:\Users\Minpu Kang\Desktop\DNS Config\DNS Config\obj\Debug\DNS_Config.Properties.Resources.resources
+C:\Users\Minpu Kang\Desktop\DNS Config\DNS Config\obj\Debug\DNS Config.csproj.GenerateResource.Cache
+C:\Users\Minpu Kang\Desktop\DNS Config\DNS Config\obj\Debug\DNS Config.csproj.CoreCompileInputs.cache
+C:\Users\Minpu Kang\Desktop\DNS Config\DNS Config\obj\Debug\DNS Config.exe.manifest
+C:\Users\Minpu Kang\Desktop\DNS Config\DNS Config\obj\Debug\DNS Config.application
+C:\Users\Minpu Kang\Desktop\DNS Config\DNS Config\obj\Debug\DNS Config.exe
+C:\Users\Minpu Kang\Desktop\DNS Config\DNS Config\obj\Debug\DNS Config.pdb

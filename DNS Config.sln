@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNS Config", "DNS Config\DNS Config.csproj", "{CBE954AD-315F-4A62-A27B-2C95E5D582BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{43F2EE1C-F6B9-432A-A65B-B62FAD6C7076}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBE954AD-315F-4A62-A27B-2C95E5D582BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBE954AD-315F-4A62-A27B-2C95E5D582BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBE954AD-315F-4A62-A27B-2C95E5D582BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBE954AD-315F-4A62-A27B-2C95E5D582BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
