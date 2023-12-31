@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DNS Config Public.exe" size="1954304">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DNS Config Public.exe" size="1980416">
       <assemblyIdentity name="DNS Config Public" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>84338X0HIIKYvzcGAC4U9ZHc2jOMDU5h1McBSD9bOsk=</dsig:DigestValue>
+        <dsig:DigestValue>/IciaQyZSEWo2btQGkbLrtqB5mMjG+hypEEtiSNwnn8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

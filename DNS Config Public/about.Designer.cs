@@ -81,9 +81,9 @@
             this.version_label.ForeColor = System.Drawing.Color.Black;
             this.version_label.Location = new System.Drawing.Point(113, 12);
             this.version_label.Name = "version_label";
-            this.version_label.Size = new System.Drawing.Size(187, 17);
+            this.version_label.Size = new System.Drawing.Size(199, 17);
             this.version_label.TabIndex = 4;
-            this.version_label.Text = "DNS Config Public Version 7";
+            this.version_label.Text = "DNS Config Public Version 7.1";
             // 
             // version_richTextBox
             // 

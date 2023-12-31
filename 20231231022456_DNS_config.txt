@@ -1,0 +1,142 @@
+;===========================================================
+;DNS configuration: services including all are examples here
+;===========================================================
+
+;=============================
+;=                           =
+;=        GPRS Recrod        =
+;=                           =
+;=============================
+
+; GGSN selected based on APN, used during PDP active in 2/3G!
+ims.mnc045.mcc123.gprs.     IN CNAME    ggsn0-gn.mnc045.mcc123.gprs.
+ims.mnc045.mcc123.gprs.     IN CNAME    ggsn1-gn.mnc045.mcc123.gprs.
+
+; OldSGSN selected based on RAC-LAC if no cooperating SGSN defined, used when P-TMSI attach, Inter RAU, ISC Inter RAU!
+rac0007.lac0006.mnc045.mcc123.gprs.     IN CNAME    sgsn01-gn.mnc045.mcc123.gprs.
+
+; OldSGSN selected based on NRI-RAC-LAC if no cooperating SGSN defined, used when P-TMSI attach, Inter RAU, ISC Inter RAU!
+nri0008.rac0007.lac0006.mnc045.mcc123.gprs.     IN CNAME    sgsn01-gn.mnc045.mcc123.gprs.
+
+; Old SGSN selected based on RAC-LAC by MME during TAU from 2/3G to 4G, RAC is mapped from NRI to MMECode then to RAC!
+rac0020.lac0006.mnc045.mcc123.gprs.     IN CNAME    sgsn01-gn.mnc045.mcc123.gprs.
+rac0021.lac0006.mnc045.mcc123.gprs.     IN CNAME    sgsn01-gn.mnc045.mcc123.gprs.
+rac0022.lac0006.mnc045.mcc123.gprs.     IN CNAME    sgsn01-gn.mnc045.mcc123.gprs.
+rac0023.lac0006.mnc045.mcc123.gprs.     IN CNAME    sgsn01-gn.mnc045.mcc123.gprs.
+
+; New SGSN queries the old MME during ISC-RAU from LTE to W/G with Gn/Gp:------------IRAT, and the MMEGroupID mapped to old LAC, MMECode mapped to old RAC!
+rac0007.lac0008.mnc045.mcc123.gprs.     IN CNAME    mme01-gn-id-mapped.mnc045.mcc123.gprs.
+nri0001.rac0007.lac0008.mnc045.mcc123.gprs.     IN CNAME    mme01-gn-id-mapped.mnc045.mcc123.gprs.
+
+
+;A/AAAA Record for GPRS
+ggsn0-gn.mnc045.mcc123.gprs.     IN A    2.2.2.1
+ggsn1-gn.mnc045.mcc123.gprs.     IN A    2.2.2.2
+sgsn01-gn.mnc045.mcc123.gprs.     IN A    3.3.3.3
+mme01-gn-id-mapped.mnc045.mcc123.gprs.     IN A    3.3.3.3
+
+;=============================
+;=                           =
+;=        EPC Recrod         =
+;=                           =
+;=============================
+
+; SGW selected based on TAC, used during attach, inter/intra TAU with SGW relocation and inter/intra HO with SGW relocation!
+tac-lb0D.tac-hb00.tac.epc.mnc045.mcc123.3gppnetwork.org.        IN NAPTR 10 10 "a"  "x-3gpp-sgw:x-s5-gtp+ue-1.2.3+nc-nr:x-s8-gtp+ue-1.2.3+nc-nr" "" topon.s5s8c-sgw.epg0.epc.mnc045.mcc123.3gppnetwork.org.
+epg0.epc.mnc045.mcc123.3gppnetwork.org.        IN NAPTR 10 10 "a" "x-3gpp-sgw:x-s11+ue-1.2.3+nc-nr" "" topon.s11c-sgw.epg0.epc.mnc045.mcc123.3gppnetwork.org.
+tac-lb0D.tac-hb00.tac.epc.mnc045.mcc123.3gppnetwork.org.        IN NAPTR 10 10 "a"  "x-3gpp-sgw:x-s5-gtp+ue-1.2.3+nc-nr:x-s8-gtp+ue-1.2.3+nc-nr" "" topon.s5s8c-sgw.epg1.epc.mnc045.mcc123.3gppnetwork.org.
+epg1.epc.mnc045.mcc123.3gppnetwork.org.        IN NAPTR 10 10 "a" "x-3gpp-sgw:x-s11+ue-1.2.3+nc-nr" "" topon.s11c-sgw.epg1.epc.mnc045.mcc123.3gppnetwork.org.
+
+; PGW selected based on APN, used during LTE/WiFi attach or PDN connection, HO between LTE and WiFi!
+ims.apn.epc.mnc045.mcc123.3gppnetwork.org.        IN NAPTR 10 10 "a" "x-3gpp-pgw:x-s5-gtp+nc-nr.smf+ue-1.2.3:x-s8-gtp+nc-nr.smf+ue-1.2.3:x-s2b-gtp:x-s2a-gtp:x-gn:x-gp" "" topon.s5s8s2bs2agnc-pgw.epg0.epc.mnc045.mcc123.3gppnetwork.org.
+epg0.epc.mnc045.mcc123.3gppnetwork.org.        IN NAPTR 10 10 "a" "x-3gpp-pgw:x-s5-gtp+nc-nr.smf+ue-1.2.3:x-s8-gtp+nc-nr.smf+ue-1.2.3:x-s2b-gtp:x-s2a-gtp:x-gn:x-gp" "" topon.s5s8s2bs2agnc-pgw.epg0.epc.mnc045.mcc123.3gppnetwork.org.
+ims.apn.epc.mnc045.mcc123.3gppnetwork.org.        IN NAPTR 10 10 "a" "x-3gpp-pgw:x-s5-gtp+nc-nr.smf+ue-1.2.3:x-s8-gtp+nc-nr.smf+ue-1.2.3:x-s2b-gtp:x-s2a-gtp:x-gn:x-gp" "" topon.s5s8s2bs2agnc-pgw.epg1.epc.mnc045.mcc123.3gppnetwork.org.
+epg1.epc.mnc045.mcc123.3gppnetwork.org.        IN NAPTR 10 10 "a" "x-3gpp-pgw:x-s5-gtp+nc-nr.smf+ue-1.2.3:x-s8-gtp+nc-nr.smf+ue-1.2.3:x-s2b-gtp:x-s2a-gtp:x-gn:x-gp" "" topon.s5s8s2bs2agnc-pgw.epg1.epc.mnc045.mcc123.3gppnetwork.org.
+
+; New MME selects an old SGSN based on GUMMEI which is mapped from RAC-LAC in the old SGSN, this is used when ISC-TAU from W/G to LTE with Gn/Gp:------------IRAT!
+; Source MME selects target SGSN during Handover from LTE to WCDMA with Gn network
+rac0007.lac0006.rac.epc.mnc045.mcc123.3gppnetwork.org.        IN NAPTR 10 10 "a" "x-3gpp-sgsn:x-gn+ue-1.2.3:x-gp+ue-1.2.3" ""    topoff.gn-sgsn01.rac0007.lac0006.rac.epc.mnc045.mcc123.3gppnetwork.org.
+
+; OldSGSN selected based on NRI-RAC-LAC with EPC FQDN, used when P-TMSI attach, Inter RAU, ISC Inter RAU!
+nri-sgsn0008.rac0007.lac0006.rac.epc.mnc045.mcc123.3gppnetwork.org.        IN NAPTR 10 10 "a" "x-3gpp-sgsn:x-gn+ue-1.2.3:x-gp+ue-1.2.3" "" topoff.gn-sgsn01.nri-sgsn0008.rac0007.lac0006.rac.epc.mnc045.mcc123.3gppnetwork.org.
+
+; Old MME selected based on GUMMEI during inter TAU!
+mmec07.mmegi0008.mme.epc.mnc045.mcc123.3gppnetwork.org.        IN NAPTR 10 10 "a" "x-3gpp-mme:x-s10+ue-1.2.3" "" topoff.s10-mme01.mmec07.mmegi0008.mme.epc.mnc045.mcc123.3gppnetwork.org.
+
+; Source MME selects target MME based on target TAC, used for Inter-LTE S1-HO; Source AMF selects target MME for HO from 5GC to EPC.
+tac-lb0D.tac-hb00.tac.epc.mnc045.mcc123.3gppnetwork.org.        IN NAPTR 10 10 "a" "x-3gpp-mme:x-s10+ue-1.2.3" ""    topoff.s10-mme01.mmec07.mmegi0008.mme.epc.mnc045.mcc123.3gppnetwork.org.
+
+; Old AMF selected based on GUAMI during TAU from 5G to LTE!;
+mmecCB.mmegi0A02.mme.epc.mnc045.mcc123.3gppnetwork.org.        IN NAPTR 10 10 "a" "x-3gpp-mme:x-s10" "" topoff.s10-mapped-from-old-amf01.mmecCB.mmegi0A02.mme.epc.mnc045.mcc123.3gppnetwork.org.
+
+
+;A/AAAA Record for EPC
+topon.s11c-sgw.epg0.epc.mnc045.mcc123.3gppnetwork.org.        IN A    1.1.1.1
+topon.s11c-sgw.epg1.epc.mnc045.mcc123.3gppnetwork.org.        IN A    1.1.1.2
+topon.s5s8s2bs2agnc-pgw.epg0.epc.mnc045.mcc123.3gppnetwork.org.        IN A    2.2.2.1
+topon.s5s8s2bs2agnc-pgw.epg1.epc.mnc045.mcc123.3gppnetwork.org.        IN A    2.2.2.2
+topoff.gn-sgsn01.rac0007.lac0006.rac.epc.mnc045.mcc123.3gppnetwork.org.        IN A    3.3.3.3
+topoff.gn-sgsn01.nri-sgsn0008.rac0007.lac0006.rac.epc.mnc045.mcc123.3gppnetwork.org.        IN A    3.3.3.3
+topoff.s10-mme01.mmec07.mmegi0008.mme.epc.mnc045.mcc123.3gppnetwork.org.        IN A    4.4.4.4
+topoff.s10-mapped-from-old-amf01.mmecCB.mmegi0A02.mme.epc.mnc045.mcc123.3gppnetwork.org.        IN A    5.5.5.5
+
+;=============================
+;=                           =
+;=        5GC Recrod         =
+;=                           =
+;=============================
+
+; Old AMF selected based on GUAMI during TAU from 5G to LTE!
+pt0B.set00B.region0A.amfi.5gc.mnc045.mcc123.3gppnetwork.org.        IN NAPTR 10 10 "a" "x-3gpp-amf:x-n26" "" topoff.n26-amf01.pt0B.set00B.region0A.amfi.5gc.mnc045.mcc123.3gppnetwork.org.
+
+; Source MME selected target AMF based on target TAC, used for HO from LTE to 5G with N26!
+tac-lb0E.tac-mb00.tac-hb00.5gstac.5gc.mnc045.mcc123.3gppnetwork.org.        IN NAPTR 10 10 "a" "x-3gpp-amf:x-n26" ""    topoff.n26-amf01.pt0B.set00B.region0A.amfi.5gc.mnc045.mcc123.3gppnetwork.org.
+
+; Source MME selected target AMF based on target TAC, used for HO from LTE to 5G, S10 as N26!
+tac-lb0E.tac-mb00.tac-hb00.5gstac.5gc.mnc045.mcc123.3gppnetwork.org.        IN NAPTR 10 10 "a" "x-3gpp-mme:x-s10" ""    topoff.n26-amf01.pt0B.set00B.region0A.amfi.5gc.mnc045.mcc123.3gppnetwork.org.
+
+
+;A/AAAA Record for 5GC
+topoff.n26-amf01.pt0B.set00B.region0A.amfi.5gc.mnc045.mcc123.3gppnetwork.org.        IN A    5.5.5.5
+
+
+=========================================================================
+NOTE: Below is just to record the inputs, donot add in config for dns server
+;=============================
+;=                           =
+;=        Input              =
+;=                           =
+;=============================
+MCC: 123
+MNC: 45
+LAC: 6
+RAC: 7
+MME Group ID: 8
+MME Code: 7
+AMF Region ID: 10
+AMF Set ID: 11
+AMF Point: 11
+4G TAC: 13
+5G TAC: 14
+APN/DNN: ims
+Topological: topon
+NAPTR or SRV: NAPTR
+UE Usage Type： 1.2.3
+SMF Support: Supported
+NR Support: Supported
+SGW S11 IP: 
+1.1.1.1
+1.1.1.2
+
+PGW S5/S8/S2b/S2a/Gn IP: 
+2.2.2.1
+2.2.2.2
+
+SGSN Gn IP: 3.3.3.3
+MME S10 IP: 4.4.4.4
+AMF N26 IP: 5.5.5.5
+SGSN NRI Length: 6
+SGSN NRI: 8
+CNAME: Selected
+
+
