@@ -773,7 +773,6 @@ namespace DNS_Config
             if ((sgwip_textBox.Text == "") && (pgwip_textBox.Text == "") && (sgsnip_textBox.Text == "") && (mmeip_textBox.Text == "") && (amfip_textBox.Text == ""))
             {
                 result_textBox.Text = "";
-                result_textBox.Height = this.Height;
 
                 if (((lac != "") && (rac != "")) || ((tac_hb != "") && (tac_lb != "")) || ((tac_5gepc_hb != "") && (tac_5gepc_lb != "")) || ((tac_5gs_hb != "") && (tac_5gs_mb != "") && (tac_5gs_lb != "")) || (apn != "") || ((mmegid != "") && (mmec != "")) || ((amf_mmegid != "") && (amf_mmec != "")) || ((amfrid_hex != "") && (amfsid_hex != "") && (amfpointer_hex != "")))
                 {
@@ -783,51 +782,74 @@ namespace DNS_Config
                 if ((lac != "") && (rac != ""))
                 {
                     result_textBox.Text += "\r\n===New SGSN query old SGSN for RAU===\r\n";
-                    result_textBox.Text += "    rac" + rac + ".lac" + lac + ".mnc" + mnc + ".mcc" + mcc + ".gprs.\r\n";
+                    result_textBox.Text += "rac" + rac + ".lac" + lac + ".mnc" + mnc + ".mcc" + mcc + ".gprs.\r\n";
+                    if (nri != "")
+                    {
+                        result_textBox.Text += "nri" + nri + ".rac" + rac + ".lac" + lac + ".mnc" + mnc + ".mcc" + mcc + ".gprs.\r\n";
+
+                        if (nri_length != "")
+                        {
+                            result_textBox.Text += "\r\n===Old SGSN selected based on RAC-LAC by MME during TAU from 2/3G to 4G, RAC is mapped from NRI to MMECode then to RAC===\r\n";
+                            string mmec_mapped = mmec_mapped_org;
+                            for (int i = 0; i < Convert.ToInt32(System.Math.Pow(2, (8 - Convert.ToInt32(nri_length)))); i++)
+                            {
+                                string rac_mmec_mapped = Convert.ToInt32(mmec_mapped).ToString("X"); ;
+                                while (rac_mmec_mapped.Length < 4)
+                                {
+                                    rac_mmec_mapped = "0" + rac_mmec_mapped;
+                                }
+                                result_textBox.Text += "rac" + rac_mmec_mapped + ".lac" + lac + ".mnc" + mnc + ".mcc" + mcc + ".gprs.\r\n";
+                                mmec_mapped = (Convert.ToInt32(mmec_mapped) + 1).ToString();
+                            }
+                        }
+                    }
 
                     result_textBox.Text += "\r\n===New MME selects an old SGSN based on GUMMEI which is mapped from RAC-LAC in the old SGSN, this is used when ISC-TAU from W/G to LTE with Gn/Gp:------------IRAT!===" + "\r\n";
-                    result_textBox.Text += "    rac" + rac + ".lac" + lac + ".rac.epc.mnc" + mnc + ".mcc" + mcc + ".3gppnetwork.org.\r\n";
-                    result_textBox.Text += "    Service: x-3gpp-sgsn:x-gn:x-gp\r\n";
+                    result_textBox.Text += "rac" + rac + ".lac" + lac + ".rac.epc.mnc" + mnc + ".mcc" + mcc + ".3gppnetwork.org.\r\n";
+                    if (nri != "")
+                    {
+                        result_textBox.Text += "nri-sgsn" + nri + ".rac" + rac + ".lac" + lac + ".rac.epc.mnc" + mnc + ".mcc" + mcc + ".3gppnetwork.org.\r\n";
+                    }
+                    result_textBox.Text += "Service: x-3gpp-sgsn:x-gn" + uetype + ":x-gp" + uetype + "\r\n";
                 }
 
                 if ((tac_hb != "") && (tac_lb != ""))
                 {
-                    result_textBox.Text += "\r\n===MME seletes A SGW, Source MME quary Target MME for inter-LTE S1-HO===\r\n";
-                    result_textBox.Text += "    tac-lb" + tac_lb + ".tac-hb" + tac_hb + ".tac.epc.mnc" + mnc + ".mcc" + mcc + ".3gppnetwork.org.\r\n";
-                    result_textBox.Text += "    Service for SGW: x-3gpp-sgw:x-s11\r\n";
-                    result_textBox.Text += "    Service for MME: x-3gpp-mme:x-s10\r\n";
+                    result_textBox.Text += "\r\n===MME seletes SGW, Source MME quary Target MME for inter-LTE S1-HO===\r\n";
+                    result_textBox.Text += "tac-lb" + tac_lb + ".tac-hb" + tac_hb + ".tac.epc.mnc" + mnc + ".mcc" + mcc + ".3gppnetwork.org.\r\n";
+                    result_textBox.Text += "Service for SGW: x-3gpp-sgw:x-s11" + uetype + "\r\n";
+                    result_textBox.Text += "Service for MME: x-3gpp-mme:x-s10" + uetype + "\r\n";
                 }
 
                 if ((tac_5gepc_hb != "") && (tac_5gepc_lb != ""))
                 {
                     result_textBox.Text += "\r\n===MME seletes an AMF which using S10 during HO from 4G to 5G===\r\n";
-                    result_textBox.Text += "    tac-lb" + tac_5gepc_lb + ".tac-hb" + tac_5gepc_hb + ".tac.epc.mnc" + mnc + ".mcc" + mcc + ".3gppnetwork.org.\r\n";
-                    result_textBox.Text += "    Service for MME: x-3gpp-mme:x-s10\r\n";
+                    result_textBox.Text += "tac-lb" + tac_5gepc_lb + ".tac-hb" + tac_5gepc_hb + ".tac.epc.mnc" + mnc + ".mcc" + mcc + ".3gppnetwork.org.\r\n";
+                    result_textBox.Text += "Service for MME: x-3gpp-mme:x-s10\r\n";
                 }
 
                 if ((tac_5gs_hb != "") && (tac_5gs_mb != "") && (tac_5gs_lb != ""))
                 {
                     result_textBox.Text += "\r\n===MME seletes an AMF which using N26 during HO from 4G to 5G===\r\n";
-                    result_textBox.Text += "    tac-lb" + tac_5gs_lb + ".tac-mb" + tac_5gs_mb + ".tac-hb" + tac_5gs_hb + ".5gstac.5gc.mnc" + mnc + ".mcc" + mcc + ".3gppnetwork.org.\r\n";
-                    result_textBox.Text += "    Service for AMF: x-3gpp-amf:x-n26\r\n";
+                    result_textBox.Text += "tac-lb" + tac_5gs_lb + ".tac-mb" + tac_5gs_mb + ".tac-hb" + tac_5gs_hb + ".5gstac.5gc.mnc" + mnc + ".mcc" + mcc + ".3gppnetwork.org.\r\n";
+                    result_textBox.Text += "Service for AMF: x-3gpp-amf:x-n26\r\n";
                 }
 
                 if (apn != "")
                 {
                     result_textBox.Text += "\r\n===APN FQDN for GGSN===\r\n";
-                    result_textBox.Text += "    " + apn + ".mnc" + mnc + ".mcc" + mcc + ".gprs.\r\n";
+                    result_textBox.Text += apn + ".mnc" + mnc + ".mcc" + mcc + ".gprs.\r\n";
 
                     result_textBox.Text += "\r\n===APN FQDN for PGW===\r\n";
-                    result_textBox.Text += "    " + apn + ".apn.epc.mnc" + mnc + ".mcc" + mcc + ".3gppnetwork.org.\r\n";
-                    result_textBox.Text += "    Services: x-3gpp-pgw:x-s5-gtp:x-s8-gtp:x-s2b-gtp:x-s2a-gtp:x-gn:x-gp\r\n";
+                    result_textBox.Text += apn + ".apn.epc.mnc" + mnc + ".mcc" + mcc + ".3gppnetwork.org.\r\n";
+                    result_textBox.Text += "Services: x-3gpp-pgw:x-s5-gtp" + network_capacity + uetype + ":x-s8-gtp" + network_capacity + uetype + ":x-s2b-gtp:x-s2a-gtp:x-gn:x-gp\r\n";
                 }
-
 
                 if ((mmegid != "") && (mmec != ""))
                 {
                     result_textBox.Text += "\r\n===Old MME selected based on GUMMEI during inter TAU!===\r\n";
-                    result_textBox.Text += "    mmec" + mmec + ".mmegi" + mmegid + ".mme.epc.mnc" + mnc + ".mcc" + mcc + ".3gppnetwork.org.\r\n";
-                    result_textBox.Text += "    Service for MME: x-3gpp-mme:x-s10\r\n";
+                    result_textBox.Text += "mmec" + mmec + ".mmegi" + mmegid + ".mme.epc.mnc" + mnc + ".mcc" + mcc + ".3gppnetwork.org.\r\n";
+                    result_textBox.Text += "Service for MME: x-3gpp-mme:x-s10" + uetype + "\r\n";
 
                     string lac_mmegid = mmegid;
                     string rac_mmec = mmec;
@@ -836,23 +858,26 @@ namespace DNS_Config
                         rac_mmec = "0" + rac_mmec;
                     }
                     result_textBox.Text += "\r\n===New SGSN queries the old MME during ISC-RAU from LTE to W/G with Gn/Gp:------------IRAT, and the MMEGroupID mapped to old LAC, MMECode mapped to old RAC!===\r\n";
-                    result_textBox.Text += "    rac" + rac_mmec + ".lac" + lac_mmegid + ".mnc" + mnc + ".mcc" + mcc + ".gprs.\r\n\r\n";
+                    result_textBox.Text += "rac" + rac_mmec + ".lac" + lac_mmegid + ".mnc" + mnc + ".mcc" + mcc + ".gprs.\r\n";
+                    if (nri_mapped != "")
+                    {
+                        result_textBox.Text += "nri" + nri_mapped + ".rac" + rac_mmec + ".lac" + lac_mmegid + ".mnc" + mnc + ".mcc" + mcc + ".gprs.\r\n";
+                    }
                 }
 
                 if ((amf_mmegid != "") && (amf_mmec != ""))
                 {
                     result_textBox.Text += "\r\n===Old AMF selected based on GUAMI during TAU from 5G to LTE with S10 used as N26!===\r\n";
-                    result_textBox.Text += "    mmec" + amf_mmec + ".mmegi" + amf_mmegid + ".mme.epc.mnc" + mnc + ".mcc" + mcc + ".3gppnetwork.org.\r\n";
-                    result_textBox.Text += "    Service for AMF: x-3gpp-mme:x-s10\r\n";
+                    result_textBox.Text += "mmec" + amf_mmec + ".mmegi" + amf_mmegid + ".mme.epc.mnc" + mnc + ".mcc" + mcc + ".3gppnetwork.org.\r\n";
+                    result_textBox.Text += "Service for AMF: x-3gpp-mme:x-s10\r\n";
                 }
 
                 if ((amfrid_hex != "") && (amfsid_hex != "") && (amfpointer_hex != ""))
                 {
                     result_textBox.Text += "\r\n===Old AMF selected based on GUAMI during TAU from 5G to LTE with N26!===\r\n";
-                    result_textBox.Text += "    pt" + amfpointer_hex + ".set" + amfsid_hex + ".region" + amfrid_hex + ".amfi.5gc.mnc" + mnc + ".mcc" + mcc + ".3gppnetwork.org.\r\n";
-                    result_textBox.Text += "    Service for AMF: x-3gpp-amf:x-n26\r\n";
+                    result_textBox.Text += "pt" + amfpointer_hex + ".set" + amfsid_hex + ".region" + amfrid_hex + ".amfi.5gc.mnc" + mnc + ".mcc" + mcc + ".3gppnetwork.org.\r\n";
+                    result_textBox.Text += "Service for AMF: x-3gpp-amf:x-n26\r\n";
                 }
-
             }
 
             //For DNS config

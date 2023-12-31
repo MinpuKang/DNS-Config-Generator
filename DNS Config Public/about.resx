@@ -124,6 +124,7 @@ Version 7.1(2023-12-31)
 - Re-design the config result based on gprs/eps/5gs record
 - Fix bug to save excel
 - Add input as appendix in configu result
+- Update FQDN generating for DNS query
 
 Version 7.0 (2023-11-26)
 - Fix some error in the config
@@ -171,7 +172,7 @@ Version 1 (2015-10-9)
   <data name="pictureBox_icon.ErrorImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        cgAAEnIBXmVb4wAAULJJREFUeF7tXQecFEX2XkAQEEFAgmRQz9P/6Z2nZzrPdIeomFBRMWEkbc55B0FM
+        cQAAEnEB89x6jgAAULJJREFUeF7tXQecFEX2XkAQEEFAgmRQz9P/6Z2nZzrPdIeomFBRMWEkbc55B0FM
         gIgCCsbDxJLjwpJ2l80LCiaMZwAxS96d6Z6Z6v/3empw6a3ZSd2zu1jf7/f9JvSr9yq9V9XV1d1REhIS
         EhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEv6hjYxq
         w79KSEj8UXDwb1E9HBdE5dn/EfUOGFt3flR/fkhCQuJYhnZeVFv7hVHPOC6M0oj4zsDt9guiHmTnRJ3A
@@ -521,7 +522,7 @@ Version 1 (2015-10-9)
   <data name="pictureBox_icon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        cgAAEnIBXmVb4wAAULJJREFUeF7tXQecFEX2XkAQEEFAgmRQz9P/6Z2nZzrPdIeomFBRMWEkbc55B0FM
+        cQAAEnEB89x6jgAAULJJREFUeF7tXQecFEX2XkAQEEFAgmRQz9P/6Z2nZzrPdIeomFBRMWEkbc55B0FM
         gIgCCsbDxJLjwpJ2l80LCiaMZwAxS96d6Z6Z6v/3empw6a3ZSd2zu1jf7/f9JvSr9yq9V9XV1d1REhIS
         EhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEv6hjYxq
         w79KSEj8UXDwb1E9HBdE5dn/EfUOGFt3flR/fkhCQuJYhnZeVFv7hVHPOC6M0oj4zsDt9guiHmTnRJ3A
@@ -871,7 +872,7 @@ Version 1 (2015-10-9)
   <data name="pictureBox_icon.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        cgAAEnIBXmVb4wAAULJJREFUeF7tXQecFEX2XkAQEEFAgmRQz9P/6Z2nZzrPdIeomFBRMWEkbc55B0FM
+        cQAAEnEB89x6jgAAULJJREFUeF7tXQecFEX2XkAQEEFAgmRQz9P/6Z2nZzrPdIeomFBRMWEkbc55B0FM
         gIgCCsbDxJLjwpJ2l80LCiaMZwAxS96d6Z6Z6v/3empw6a3ZSd2zu1jf7/f9JvSr9yq9V9XV1d1REhIS
         EhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEv6hjYxq
         w79KSEj8UXDwb1E9HBdE5dn/EfUOGFt3flR/fkhCQuJYhnZeVFv7hVHPOC6M0oj4zsDt9guiHmTnRJ3A
